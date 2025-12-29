@@ -1,0 +1,95 @@
+.hero {
+    height: 40rem;
+    background-image: url("../public/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-weight: 700;
+}
+
+.section-header hr {
+    width: 60px;
+    height: 3px;
+    margin: 0.75rem auto 0;
+    opacity: 0.5;
+}
+
+.section-divider {
+    width: 60px;
+    margin: 0;
+    border: 0;
+    border-top: 2px solid currentColor;
+    opacity: 0.5;
+    margin-bottom: rem;
+}
+
+.experience-section { 
+    background-color: white;
+    padding: 3rem 0;
+}
+
+
+/* Experience Card Styles */
+.experience-card {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+} 
+
+.experience-content {
+    display: inline-block;
+    max-width: 420px;
+    width: 100%;
+}
+
+.experience-img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.experience-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.experience-title a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.experience-title a:hover {
+    text-decoration: #2563eb;
+}
+
+.experience-date {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.experience-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.experience-desc ul {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+}

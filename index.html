@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <meta charset="UTF-8"> 
+    <title>Steven Dyer</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="../styles/main.css" /> 
+    <link rel="stylesheet" href="../styles/index.css" /> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+</script> 
+
+<!-- Load header and footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+
+<body> 
+    <!-- Include header -->
+     <div id="header-placeholder"></div>
+
+     <main id="page-content"> 
+
+        <!-- Hero Section --> 
+         <div id="home" class=" hero d-flex align-items-center justify-content-center"> 
+            <div class="p-4 p-md-5 rounded text-white" style="background-color: rgba(50, 50, 50, 0.6); max-width: 700px; width: 90%;"> 
+                <div class="display-4 fw-bold text-white">
+                    Steven Dyer
+                </div>
+                <div class="text-primary fs-3 fw-bold">
+                    Mechatronics Engineering Student
+                </div> 
+                <div class="text-white">
+                    I am a mechatronics engineering student attending Memorial University of Newfoundland, expecting to graduate in May 2028. I have a strong interest in robotics, embedded systems, and firmware development. I develop firmware for various student design teams, personal projects, and through my professional work.
+                </div> 
+            </div> 
+        </div> 
+            
+            <!-- Who Am I? --> 
+            <div id="who" class="bg-light py-5"> 
+                <div class="text-center"> 
+                    <div class="section-header">
+                        <h2 class="fw-bold">About Me</h2>
+                        <hr class="section-divider"> 
+                    </div>
+                    <img src="public/headshot.png" alt="Profile" class="profile-img rounded mb-4" style="width: 280px; height: auto;"> 
+                    <div class="mx-auto text-center" style="max-width: 700px;">
+                        <div class="text-start d-inline-block"> 
+                        <div class="text-primary fw-bold fs-5">
+                            Bachelor of Mechatronics Engineering
+                        </div> 
+                        <div class="text-primary fw-bold fs-6 mb-2">
+                            GPA: 3.75/4.0
+                        </div> 
+                        <ul class="fw-bold fs-6 mt-2" style="list-style-position: inside; padding-left: 0;"> 
+                            <li>Software Team Lead for Paradigm Engineering</li> 
+                            <li>Electronics Team Member for Memorial Baja</li> 
+                            <li>Co-Class Representitive for MUN Mechatronics 2028</li> 
+                            <li>PEGNL Engineering Scholarship</li>
+                            <li>Ray Bonia Memorial Scholarship</li>
+                            <li>Cori Brown Memorial Award</li> 
+                            <li>Top 1% of Dave Matthews Band Listeners</li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <!-- Experience section --> 
+     <section id="experience" class="py-5 bg-white"> 
+        <div class="container">
+            <div class="section-header"> 
+                <h2 class="fw-bold">Experience</h2> 
+                <hr class="section-divider"> 
+        </div>
+        <div class="row g-4 justify-content-center">
+
+            <!-- EXPERIENCE CARD -->
+             <div class="col-lg-6"> 
+                <div class="experience-card"> <div class="experience-content"> 
+                    <img src="public/michelin.png" alt="Michelin" class="experience-img"> 
+                    <div class="experience-title"> 
+                        <a href="https://www.michelin.ca/" class="experience-title">Michelin - Electrical Engineering Intern</a> </div> 
+                        <div class="experience-date">Waterville, NS · Jan 2025 - Apr 2025, Sept 2025 - Dec 2025</div> 
+                        <div class="experience-desc"> Michelin is a global leader in the automitve industry and tire manufacturing. As an electrical engineering intern, I worked with the Innovation team on implementing new technologies into the tire manufactuering process. My work included: 
+                            <ul>
+                                <li>Developed firmware for a new standards training lab on a ESP32 microcontroller using C to establish I2C and UART communication drivers to several sensors.</li> 
+                                <li>Led a team of four technicians to install a new energy monitoring device by first drafting all necessary electrical schematics and writing PLC ladder logic, resulting in improved energy trend tracking.</li>
+                                <li>Fine-tuned a Gocator 3D sensor via built-in emulation software, enhancing the automated quality inspection system and improving dimensional measurement accuracy by 60%.</li>
+                                <li>Designed and proposed a closed-loop control system to enhance temperature regulation for a tire membrane test bed’s heating element, including the full schematic design in DraftSight.</li> 
+                            </ul> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+
+            <div class="col-lg-6"> 
+                <div class="experience-card"> 
+                    <div class="experience-content"> <img src="public/paradigm.png" alt="Paradigm Engineering" class="experience-img"> 
+                        <div class="experience-title"> 
+                            <a href="https://munparadigm.com/" class="experience-title">Paradigm Engineering - Software Team Lead</a> 
+                        </div> 
+                        <div class="experience-date">St. John's, NL · Aug 2025 - Present</div> 
+                        <div class="experience-desc"> Paradigm Engineering is the largest design and competition team at the Memorial University of Newfoundland. The team has competed at the SpaceX Hyperloop Pod Competitions, The Boring Company's 'Not-a-Boring' competition, the Intelligent Ground Vehicle competition, and the Autonomous Karting Series. Paradigm is gearing up to compete in the Autonomous Karting Series in 2026, creating a fully autonomous, self-driving go-kart: 
+                            <ul>
+                                <li>Wrote on board firmware, including low-level drivers for CAN, UART, and PWM, using C on a STM32G4 microcontroller to facilitate communication between a Jetson Orin, a Pixhawk 6C, and several motors.</li> 
+                                <li>Developed a computer vision system using a ZED 2i Stereo Camera and PyTorch, implementing a CNN to detect white lines on the race track, enabling autonomous navigation.</li> 
+                                <li>Designed the software architecture of an autonomous go-kart which achieved second place at the 2025 Autonomous Karting Series national grand-prix.</li> 
+                                <li>Led and mentored software team by preparing onboarding resources, documentation, and task assignments, resulting in significant contributions and experience-gain by 10+ members.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6"> 
+                <div class="experience-card"> 
+                    <div class="experience-content"> 
+                        <img src="public/baja.png" alt="Memorial Baja" class="experience-img"> 
+                        <div class="experience-title"> 
+                            <a href="https://www.linkedin.com/company/memorialbaja/posts/?feedView=all" class="experience-title">Memorial Baja - Electronics Team Member</a>
+                        </div>
+                        <div class="experience-date">St. John's, NL · Sept 2023 - Present</div>
+                        <div class="experience-desc">Memorial Baja is a student design team building an single-seat off-road Baja SAE racing vehicle. The team is currently preparing to compete in the Baja SAE competion in 2026. As an electronics team member, I contribute to the development of all electronic systems on the vehicle:
+                            <ul>
+                                <li>Implemented a hall effect sensor program using FreeRTOS on a ESP32 microcontroller to read the RPM of a Baja SAE vehicle and display data onto a digital dashboard.</li>
+                                <li>Performed testing and troubleshooting of electronic systems using multimeters, oscilloscopes, and logic analyzers, ensuring accurate sensor readings.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6"> 
+                <div class="experience-card"> 
+                    <div class="experience-content"> 
+                        <img src="public/technipfmc.png" alt="TechnipFMC" class="experience-img">
+                        <div class="experience-title">
+                            <a href="https://www.technipfmc.com/" class="experience-title">TechnipFMC - Project Engineering Intern</a>
+                        </div>
+                        <div class="experience-date">St. John's, NL · May 2024 - Aug 2024</div>
+                        <div class="experience-desc"> TechnipFMC is a global energy company that provides technolgies, project management, and engineering services to the oil, gas, and broader energy industry. As a project engineering intern, I worked with the Project Engineering department assisting in the execution of large-scale subsea projects. My work included:
+                            <ul>
+                                <li>Managed master equipment certification folder using Excel to streamline data retrieval for audits and inspection.</li>
+                                <li>Conducted site inspections to monitor subsea project progress and ensure compliance with quality standards.</li>
+                                <li>Performed calculations on reel lift rigging assembly using knowledge of statics to ensure the assembly can tolerate expected loads.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Include footer --> 
+<div id="footer-placeholder"></div> 
+
+<script src="../main.js"></script>
+</body>
+</html>
