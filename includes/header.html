@@ -1,51 +1,32 @@
-<!-- DESKTOP VIEW HEADER -->
-<header class="container-fluid header for_desktop py-2" style="background-color:  #0a1e3a">
-    <div class="row align-items-center justify-content-center">
-        <nav class="col-auto d-flex flex-nowrap justify-content-center overflow-auto">
-            <button type="button" onclick="window.location.href='index.html'" class="btn btn-primary me-2">
-                Home
-            </button>
-            <button type="button" onclick="window.location.href='projects.html'" class="btn btn-primary me-2">
-                Projects
-            </button>
-            <button type="button" onclick="window.location.href='public/Steven_Dyer_Resume.pdf'" class="btn btn-primary me-2">
-                Resume
-            </button>
-            <button type="button" onclick="window.location.href='mailto:swdyer@mun.ca'" class="btn btn-primary me-2">
-                Contact
-            </button>
-            <button type="button" onclick="window.location.href='https://github.com/stevenwdyer'" class="btn btn-primary me-2">
-                Github
-            </button>
-            <button type="button" onclick="window.location.href='https://www.linkedin.com/in/stevenwdyer/'" class="btn btn-primary me-2">
-                LinkedIn
-            </button>
-        </nav>
-    </div>
-</header>
+<!-- RESPONSIVE HEADER -->
+<header class="container-fluid py-2" style="background-color: #0a1e3a;">
+  <div class="row justify-content-center align-items-center">
+    
+    <!-- Desktop buttons -->
+    <nav class="col-auto d-flex flex-nowrap justify-content-center desktop-menu">
+      <button type="button" onclick="window.location.href='index.html'" class="btn btn-primary me-2">Home</button>
+      <button type="button" onclick="window.location.href='projects.html'" class="btn btn-primary me-2">Projects</button>
+      <button type="button" onclick="window.location.href='public/Steven_Dyer_Resume.pdf'" class="btn btn-primary me-2">Resume</button>
+      <button type="button" onclick="window.location.href='mailto:swdyer@mun.ca'" class="btn btn-primary me-2">Contact</button>
+      <button type="button" onclick="window.location.href='https://github.com/stevenwdyer'" class="btn btn-primary me-2">Github</button>
+      <button type="button" onclick="window.location.href='https://www.linkedin.com/in/stevenwdyer/'" class="btn btn-primary me-2">LinkedIn</button>
+    </nav>
 
-<!-- MOBILE VIEW HEADER -->
-<header class="container-fluid header for_mobile py-2" style="background-color:  #0a1e3a">
-    <div class="row align-items-center justify-content-center">
-        <nav class="col-auto d-flex flex-nowrap justify-content-center overflow-auto">
-            <button type="button" onclick="window.location.href='index.html'" class="btn btn-primary me-2">
-                Home
-            </button>
-            <button type="button" onclick="window.location.href='projects.html'" class="btn btn-primary me-2">
-                Projects
-            </button>
-            <button type="button" onclick="window.location.href='public/Steven_Dyer_Resume.pdf'" class="btn btn-primary me-2">
-                Resume
-            </button>
-            <button type="button" onclick="window.location.href='mailto:swdyer@mun.ca'" class="btn btn-primary me-2">
-                Contact
-            </button>
-            <button type="button" onclick="window.location.href='https://github.com/stevenwdyer'" class="btn btn-primary me-2">
-                Github
-            </button>
-            <button type="button" onclick="window.location.href='https://www.linkedin.com/in/stevenwdyer/'" class="btn btn-primary me-2">
-                LinkedIn
-            </button>
-        </nav>
+    <!-- Mobile Hamburger -->
+    <div class="col-auto mobile-menu d-none">
+      <button id="hamburgerBtn" class="btn btn-primary">
+        &#9776; <!-- Hamburger icon -->
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile dropdown menu (hidden by default) -->
+  <div id="mobileDropdown" class="d-none mt-2 text-center">
+    <button type="button" onclick="window.location.href='index.html'" class="btn btn-primary w-100 mb-1">Home</button>
+    <button type="button" onclick="window.location.href='projects.html'" class="btn btn-primary w-100 mb-1">Projects</button>
+    <button type="button" onclick="window.location.href='public/Steven_Dyer_Resume.pdf'" class="btn btn-primary w-100 mb-1">Resume</button>
+    <button type="button" onclick="window.location.href='mailto:swdyer@mun.ca'" class="btn btn-primary w-100 mb-1">Contact</button>
+    <button type="button" onclick="window.location.href='https://github.com/stevenwdyer'" class="btn btn-primary w-100 mb-1">Github</button>
+    <button type="button" onclick="window.location.href='https://www.linkedin.com/in/stevenwdyer/'" class="btn btn-primary w-100 mb-1">LinkedIn</button>
+  </div>
 </header>
