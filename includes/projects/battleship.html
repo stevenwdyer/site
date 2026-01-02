@@ -1,0 +1,47 @@
+<p class="text-primary h1 mt-2 mb-4 mx-2 dynamic_size_text fw-bold">Battleship</p>
+
+<p class="ds-5 m-2 dynamic_size_test">
+    This project is a scaled-down recreation of the strategy game titled "Battleship". It was developed for the ECE 4510 Microprocessors & Digital Logic project at Memorial University of Newfoundland.
+    <a
+    class="link-underline-primary Link-hover-opacity-50"
+    onclick="button_redirect('https://github.com/stevenwdyer/battleship')">
+    See this project's repository</a><br><br>
+
+    This version of the game utilizes two Arduinos that communicate with each other via UART, 3x3 LED matrices for grid visualization, joysticks for ship/shot selection, buttons for ship/shot confirmation, passive buzzers for audio cues, and 7-segment displays for score/state tracking.<br><br>
+</p>
+
+<div id="battleshipCarousel" class="carousel slide">
+    <div class="carousel-inner justify-content-center">
+        <div class="carousel-item active">
+            <img src="public/battleship/battleship_controller.png"
+                class="d-block img-fluid mx-auto my-2"
+                style="max-width: 600px; max-height: 450px; object-fit: contain;"
+                alt="Battleship Controller">
+            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Battleship Controller</p>
+        </div>
+        <div class="carousel-item">
+            <img src="public/battleship/battleship_controller_rules_wall.png"
+                class="d-block img-fluid mx-auto my-2"
+                style="max-width: 600px; max-height: 450px; object-fit: contain;"
+                alt="Battleship Controller with Rules Stand">
+            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Battleship Controller with Rules Stand</p>
+        </div>
+        <div class="carousel-item">
+            <img src="public/battleship/battleship_two_controllers.png"
+                class="d-block img-fluid mx-auto my-2"
+                style="max-width: 600px; max-height: 450px; object-fit: contain;"
+                alt="Battleship Controllers Connected with Rules Stand">
+            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Battleship Controllers Connected with Rules Stand</p>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#battleshipCarousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#battleshipCarousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

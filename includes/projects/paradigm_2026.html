@@ -1,0 +1,72 @@
+<p class="text-primary h1 mt-2 mb-4 mx-2 dynamic_size_text fw-bold">Paradigm Engineering 2026</p>
+<p class="text-warning fs-5 m-2 dynamic_size_test">
+    Note: This project is currently in development.<br><br>
+</p>
+
+<p class="ds-5 m-2 dynamic_size_test">
+    Paradigm Engineering is building an autonomous go-kart to compete in the Autonomous Karting Series national grand-prix at Purdue University in May 2026.<br><br>
+
+    The go-kart features a NVIDIA Jetson Orin, a Pixhawk 6C, and an STM32G474 microcontroller along with a suite of other devices including a GPS sensor and antenna, RC receiver, Ubiquiti Bullet AC, and several DC motors. As the software lead, I contribute to all aspects of the custom built software package, which allows for real-time and autonomous control of the go-kart.<br><br>
+</p>
+
+<p class="fs-5 m-2 dynamic_size_text">
+Contents:<br>
+</p>
+<ul class="ds-5 m-2 dynamic_size_test">
+    <li><a class="Link-hover-opacity-50" href="#embedded-control-stack">Embedded Control Stack (STM32G4)</a></li>
+    <li><a class="Link-hover-opacity-50" href="#autonomous-drive-algorithm">Autonomous Drive Algorithm</a></li>
+    <li><a class="Link-hover-opacity-50" href="#computer-vision">Computer Vision</a></li>
+    <li><a class="Link-hover-opacity-50" href="#custom-flight-software">Custom Flight Software</a></li>
+    <li><a class="Link-hover-opacity-50" href="#simulation">Simulation</a></li>
+    <li><a class="Link-hover-opacity-50" href="#deployment">Deployment</a></li>
+</ul>
+
+<div class="text-center">
+    <img class="img-fluid rounded ms-2 ps-2" src="public/paradigm_2026/aks-2026-software-architecture-diagram.png" alt="Paradigm Engineering 2026 Software Diagram" style="max-width: 600px;"/>
+    <p class="text-secondary fs-6 mt-2">Paradigm Engineering 2026 Software Diagram</p>
+</div>
+
+<p id="embedded-control-stack" class="text-primary h2 my-3 mx-2 dynamic_size_text">Embedded Control Stack (STM32G4)</p>
+<p class="ds-5 m-2 dynamic_size_test">
+    The STM32G4 is used for real time safety monitoring and motor control. Its firmware is built around FreeRTOS and is organized into defined tasks to complete the following:
+</p>
+<ul class="fs-6 lh-lg dynamic_size_text">
+    <li>Receiving control commands from the Jetson over UART via a custom driver.</li>
+    <li>Generating PWM outputs for both steering and braking motors.</li>
+    <li>Interfacing with the drive motor controller via CAN.</li>
+    <li>Monitoring safety conditions such as Jetson heartbeat and e-stop trigger.</li>
+    <li>Diagnostics reporting.</li>
+</ul>
+<p class="ds-5 m-2 dynamic_size_test">
+    These tasks communicate with one another using RTOS queues. A custom bare-metal UART driver was also written for improved control over timing and error handling.
+</p>
+
+<p id="autonomous-drive-algorithm" class="text-primary h2 my-3 mx-2 dynamic_size_text">Autonomous Drive Algorithm</p>
+<p class="ds-5 m-2 dynamic_size_test">
+    The kart's autonomous drive algorithm is ran on the Jetson Orin and is built using ROS2. The algorithm is given a .txt file with a list of waypoints and a control node iterates through these waypoints, which computes heading and distance errors relative to the kart's current position. Using this information, it will generate steering and velocity commands to guide the kart to the active waypoint. Once reached, the system moves on to the next waypoint.
+</p>
+
+<p id="computer-vision" class="text-primary h2 my-3 mx-2 dynamic_size_text">Computer Vision</p>
+<p class="ds-5 m-2 dynamic_size_test">
+    The kart's computer vision system utilizes a ZED 2i stereo camera that sends a live camera feed to the Jetson Orin which runs a CNN to detect white lines on the race track. This is used alongside the main autonomous drive algorithm for improved waypoint following.
+</p>
+
+<p id="custom-flight-software" class="text-primary h2 my-3 mx-2 dynamic_size_text">Custom Flight Software</p>
+<p class="ds-5 m-2 dynamic_size_test">
+    The kart has custom flight software that runs on the Jetson Orin and is responsible for filtering and fusing sensor data from the Pixhawk. This is still in early development stages.
+</p>
+
+<p id="simulation" class="text-primary h2 my-3 mx-2 dynamic_size_text">Simulation</p>
+<p class="ds-5 m-2 dynamic_size_test">
+    The simulation, based on Gazebo, was developed as part of the 2025 software package. It was used for developing and testing the autonomous drive algorithm with the absence of a physical kart.
+</p>
+
+<div class="text-center">
+    <img class="img-fluid rounded ms-2 ps-2" src="public/paradigm_2026/paradigm_2026_simulation.png" alt="Paradigm Engineering 2026 Software Diagram" style="max-width: 600px;"/>
+    <p class="text-secondary fs-6 mt-2">Simulated Go-Kart in Gazebo</p>
+</div>
+
+<p id="deployment" class="text-primary h2 my-3 mx-2 dynamic_size_text">Deployment</p>
+<p class="ds-5 m-2 dynamic_size_test">
+    The embedded firmware is flashed onto the STM32G4 via the SWD protocol using an ST-LINK debugger. The Jetson Orin software is delpoyed using scripted software.
+</p>

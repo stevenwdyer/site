@@ -1,0 +1,40 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) sepia(1) saturate(500%) hue-rotate(200deg);
+}
+
+.section-divider {
+    width: 60px;
+    margin: 0;
+    border: 0;
+    border-top: 2px solid currentColor;
+    opacity: 0.5;
+    margin-bottom: rem;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-weight: 700;
+}
+
+.section-header hr {
+    width: 60px;
+    height: 3px;
+    margin: 0.75rem auto 0;
+    opacity: 0.5;
+}
+
+#footer-placeholder {
+    flex-shrink: 0;
+}

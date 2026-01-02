@@ -1,0 +1,47 @@
+<p class="text-primary h1 mt-2 mb-4 mx-2 dynamic_size_text fw-bold">Only a Spoonful</p>
+
+<p class="ds-5 m-2 dynamic_size_test">
+    This device is a self-balancing eating utensil designed to assist those with Parkinson's disease and wrist tremors. It utilizes an MPU6050 IMU (featuring a 3-axis accelerometer and gyroscope) as well as an SG90 servo motor to control the head of the utensil. An ESP32-S3 microcontroller is used to run the sensor fusion algorithm, which combines the accelerometer and gyroscope data to determine the tilt angle, as well as the PID controller for precise stabilization to counteract rapid movements. It also features a toggle switch and an indicator LED to enable or disable stabilization, as well as a 5V battery to power the ESP32 via USB. The design utilizes 3D-printed parts to keep the device lightweight and features two rings at the base to provide a more secure grip for the user.<br><br>
+    
+    This project was done for the 2025 DO.IT hardware hackathon, which took place over the course of a weekend. The project placed first overall in the competition.
+    <a
+    class="link-underline-primary Link-hover-opacity-50"
+    onclick="button_redirect('https://github.com/stevenwdyer/only-a-spoonful')">
+    See this project's repository</a>
+</p>
+
+<div id="onlyASpoonfulCarousel" class="carousel slide">
+    <div class="carousel-inner justify-content-center">
+        <div class="carousel-item active">
+            <img src="public/only_a_spoonful/spoonful_side.png"
+                class="d-block img-fluid mx-auto my-2"
+                style="max-width: 600px; max-height: 450px; object-fit: contain;"
+                alt="Assembled Self-Balancing Eating Utensil (Side View)">
+            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Assembled Self-Balancing Eating Utensil (Side View)</p>
+        </div>
+        <div class="carousel-item">
+            <img src="public/only_a_spoonful/spoonful_bottom.png"
+                class="d-block img-fluid mx-auto my-2"
+                style="max-width: 600px; max-height: 450px; object-fit: contain;"
+                alt="Assembled Self-Balancing Eating Utensil (Bottom View)">
+            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Assembled Self-Balancing Eating Utensil (Bottom View)</p>
+        </div>
+        <div class="carousel-item">
+            <img src="public/only_a_spoonful/spoonful_upright.png"
+                class="d-block img-fluid mx-auto my-2"
+                style="max-width: 600px; max-height: 450px; object-fit: contain;"
+                alt="Assemblled Self-Balancing Eating Utensil (Upright View)">
+            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Assemblled Self-Balancing Eating Utensil (Upright View)</p>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#onlyASpoonfulCarousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#onlyASpoonfulCarousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
