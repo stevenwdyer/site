@@ -4,9 +4,9 @@
 </p>
 
 <p class="ds-5 m-2 dynamic_size_test">
-    Paradigm Engineering is building an autonomous go-kart to compete in the Autonomous Karting Series national grand-prix at Purdue University in May 2026.<br><br>
+    Paradigm Engineering is building an autonomous go-kart to compete in the Autonomous Karting Series National Grand Prix at Purdue University in May 2026.<br><br>
 
-    The go-kart features a NVIDIA Jetson Orin, a Pixhawk 6C, and an STM32G474 microcontroller along with a suite of other devices including a GPS sensor and antenna, RC receiver, Ubiquiti Bullet AC, and several DC motors. As the software lead, I contribute to all aspects of the custom built software package, which allows for real-time and autonomous control of the go-kart.<br><br>
+    The go-kart features a NVIDIA Jetson Orin, a Pixhawk 6C, and an STM32G474 microcontroller along with a suite of other devices including a GPS sensor and antenna, RC receiver, Ubiquiti Bullet AC, and several DC motors. As the software lead, I contribute to all aspects of the custom-built software package, which allows for real-time and autonomous control of the go-kart.<br><br>
 </p>
 
 <p class="fs-5 m-2 dynamic_size_text">
@@ -28,7 +28,7 @@ Contents:<br>
 
 <p id="embedded-control-stack" class="text-primary h2 my-3 mx-2 dynamic_size_text">Embedded Control Stack (STM32G4)</p>
 <p class="ds-5 m-2 dynamic_size_test">
-    The STM32G4 is used for real time safety monitoring and motor control. Its firmware is built around FreeRTOS and is organized into defined tasks to complete the following:
+    The STM32G4 is used for real-time safety monitoring and motor control. Its firmware is built around FreeRTOS and is organized into defined tasks to complete the following:
 </p>
 <ul class="fs-6 lh-lg dynamic_size_text">
     <li>Receiving control commands from the Jetson over UART via a custom driver.</li>
@@ -43,7 +43,7 @@ Contents:<br>
 
 <p id="autonomous-drive-algorithm" class="text-primary h2 my-3 mx-2 dynamic_size_text">Autonomous Drive Algorithm</p>
 <p class="ds-5 m-2 dynamic_size_test">
-    The kart's autonomous drive algorithm is ran on the Jetson Orin and is built using ROS2. The algorithm is given a .txt file with a list of waypoints and a control node iterates through these waypoints, which computes heading and distance errors relative to the kart's current position. Using this information, it will generate steering and velocity commands to guide the kart to the active waypoint. Once reached, the system moves on to the next waypoint.
+    The kart's autonomous drive algorithm is run on the Jetson Orin and is built using ROS2. The algorithm is given a .txt file with a list of waypoints and a control node iterates through these waypoints, which computes heading and distance errors relative to the kart's current position. Using this information, it will generate steering and velocity commands to guide the kart to the active waypoint. Once reached, the system moves on to the next waypoint.
 </p>
 
 <p id="computer-vision" class="text-primary h2 my-3 mx-2 dynamic_size_text">Computer Vision</p>
@@ -58,7 +58,7 @@ Contents:<br>
 
 <p id="simulation" class="text-primary h2 my-3 mx-2 dynamic_size_text">Simulation</p>
 <p class="ds-5 m-2 dynamic_size_test">
-    The simulation, based on Gazebo, was developed as part of the 2025 software package. It was used for developing and testing the autonomous drive algorithm with the absence of a physical kart.
+    The simulation, based on Gazebo, was developed as part of the 2025 software package. It was used for developing and testing the autonomous drive algorithm in the absence of a physical kart.
 </p>
 
 <div class="text-center">
@@ -68,5 +68,5 @@ Contents:<br>
 
 <p id="deployment" class="text-primary h2 my-3 mx-2 dynamic_size_text">Deployment</p>
 <p class="ds-5 m-2 dynamic_size_test">
-    The embedded firmware is flashed onto the STM32G4 via the SWD protocol using an ST-LINK debugger. The Jetson Orin software is delpoyed using scripted software.
+    The embedded firmware is flashed onto the STM32G4 via the SWD protocol using an ST-LINK debugger. The Jetson Orin software is deployed using scripted software.
 </p>
