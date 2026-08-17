@@ -1,0 +1,33 @@
+<p class="ds-5 m-2 dynamic_size_test">
+    Formula MUN is building an FSAE electric vehicle to compete in the Formula FSAE electric competition at the Michigan International Speedway in 2027.<br><br>
+
+    As the co-founder and low voltage lead, I design the architecture of the low voltage system, design custom PCBs for the car and develop its firmware for real-time control and monitoring.<br><br>
+</p>
+ 
+<!-- ── BSPD ────────────────────────────────────────── -->
+<p id="fmun-bspd" class="text-primary h2 my-3 mx-2 dynamic_size_text">Brake System Plausibility Device (BSPD)</p>
+ 
+<p class="fs-6 m-2 dynamic_size_text">
+    The BSPD is a non-programmable circuit used to monitor accumulator current and brake pressure. It directly interfaces with a current sensor placed on high voltage and a brake fluid pressure sensor. It controls the shutdown circuit by comparing the signals form the current sensor and brake fluid pressure sensor. When the device loses signal from either sensor, or it detects hard braking at the same time as more than 10% throttle, it opens the shutdown circuit.
+</p>
+ 
+     <div class="img-strip">
+        <figure>
+            <img src="public/formula/BSPD_Flowchart.png" alt="BSPD Flowchart" />
+            <figcaption class="text-secondary fs-6 mt-2 text-center">BSPD Flowchart</figcaption>
+        </figure>
+    </div>
+ 
+<!-- ── GLV ────────────────────────────────────────── -->
+<p id="fmun-glv" class="text-primary h2 my-3 mx-2 dynamic_size_text">LV Power Distribution</p>
+ 
+<p class="fs-6 m-2 dynamic_size_text">
+    The low voltage power distribution board is used to safely and efficiently distribute power from the EarthX ETX LiFePO4 battery to our low voltage components. The board is currently being designed.
+</p>
+ 
+<!-- ── Architecture ───────────────────────────────── -->
+<p id="fmun-arch" class="text-primary h2 my-3 mx-2 dynamic_size_text">LV System Architecture</p>
+ 
+<p class="fs-6 m-2 dynamic_size_text">
+    The vehicle is planned to have four custom PCBs on it: the Vehicle Control Unit (VCU), LV Power Distribution board, BSPD, and Shutdown Circuit board. The VCU is a STM32H743 with a dual-CANbus architecture; one explicitly for the powertrain motor controller, sending speed and torque commands, and one for all other electronics on the car, such as the BMS and digital dashboard. 
+</ul>

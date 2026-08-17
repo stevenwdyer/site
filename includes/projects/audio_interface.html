@@ -1,0 +1,51 @@
+<p class="ds-5 m-2 dynamic_size_test">
+    This board is used as an interface between an electronic instrument and a host computer for recording music. Effects can also be added and adjusted via firmware.<br><br>
+
+    The goal of this project is to give me a custom, bare-metal platform on which I can try my hand at implementing audio effect algorithms from scratch, as well as record my own music.<br><br>
+</p>
+
+<!-- ── Hardware ──────────────────────────────────── -->
+<p id="audio-hw" class="text-primary h2 my-3 mx-2 dynamic_size_text">Hardware Design</p>
+ 
+<p class="fs-6 m-2 dynamic_size_text">
+    The PCB was designed using KiCAD. The design includes:
+</p>
+<ul class="fs-6 lh-lg dynamic_size_text">
+    <li>A 1/4" stereo jack for instrument input. This goes through an op-amp buffer circuit and an inverting amplifier to match the audio codec's 3.3V input requirement.</li>
+    <li>A 1/8" headphone jack, enabling audio streaming to a connected headset.</li>
+    <li>An audio codec to take the analog instrument input and compress it into digital audio to send to the STM32. The codec interfaces with the STM32 via SAI for audio streaming and I2C for control.</li>
+    <li>An STM32H745 microcontroller. It's dual-core is used to split the audio filtering tasks and USB streaming tasks to two different cores, decreasing streaming delay. This interfaces with the audio codec over SAI for audio streaming and I2C for control, a host computer over USB, and multiple indicator LEDs.</li>
+    <li>Two USB connectors, one for power, and one for streaming data to a host computer.</li>
+    <li>A 12.288MHz crystal oscillator as a clock source. This allows for sampling at professional audio rates, such as 48kHz, 96kHz, and 192kHz.</li>
+    <li>An SWD interface, enabling firmware flashing and in-circuit debugging using an external ST-LINK.</li>
+    <li>A 5V to 3.3V ultra-low noise linear regulator, providing clean power to all onboard analog circuitry.</li>
+    <li>A 5V to 3.3V linear regulator, providing power to all onboard digital circuitry.</li>
+    <lI>A 3.3V to 1.8V, providing power to the audio codec.</lI>
+    <li>User interface, via a reset and user button, as well as power indicator and user indicator LEDs.</li>
+</ul>
+
+    <div class="img-strip">
+        <figure>
+            <img src="public/audio_interface/audio_interface_layout.png" alt="PCB Layout" />
+            <figcaption class="text-secondary fs-6 mt-2 text-center">PCB Layout</figcaption>
+        </figure>
+        <figure>
+            <img src="public/audio_interface/audio_interface_3d.png" alt="PCB 3D" />
+            <figcaption class="text-secondary fs-6 mt-2 text-center">PCB 3D Render</figcaption>
+        </figure>
+    </div>
+
+<p id="audio-fw" class="text-primary h2 my-3 mx-2 dynamic_size_text">Firmware &amp; Audio Effects</p>
+ 
+<p class="fs-6 m-2 dynamic_size_text">
+    The firmware and audio effects are currently a work in progress until the hardware arrives. :/
+</p>
+
+<p class="fs-6 m-2 dynamic_size_text fw-bold">
+    GitHub link 
+    <a class="link-underline-primary"
+        href="https://github.com/stevenwdyer/worlds-worst-audio-interface"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="button_redirect('https://github.com/stevenwdyer/worlds-worst-audio-interface')">here</a>
+</p>

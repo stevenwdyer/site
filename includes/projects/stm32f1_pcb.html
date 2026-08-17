@@ -1,5 +1,3 @@
-<p class="text-primary h1 mt-2 mb-4 mx-2 dynamic_size_text fw-bold">STM32F1 Development PCB</p>
-
 <p class="fs-6 m-2 dynamic_size_text">
     This board is an STM32F103-based development platform, designed for prototyping and developing embedded applications. The design includes:
 </p>
@@ -13,38 +11,26 @@
     <li>A standardized form factor, with a 19x50mm footprint and 2.54mm pitch headers, enabling compatibility with standard breadboards for rapid prototyping.</li>
 </ul>
 
-<div id="stm32f1BoardCarousel" class="carousel slide mx-auto" style="max-width: 100%;">
-    <div class="carousel-inner justify-content-center">
-        <div class="carousel-item active">
-            <img src="public/stm32f1_pcb/stm32f1_populated_top.png"
-                class="d-block img-fluid mx-auto my-2"
-                style="max-width: 600px; max-height: 450px; object-fit: contain;"
-                alt="Populated PCB (Top Layer)">
-            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Populated PCB (Top Layer)</p>
-        </div>
-        <div class="carousel-item">
-            <img src="public/stm32f1_pcb/stm32f1_populated_bottom.png"
-                class="d-block img-fluid mx-auto my-2"
-                style="max-width: 600px; max-height: 450px; object-fit: contain;"
-                alt="Populated PCB (Bottom Layer)">
-            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">Populated PCB (Bottom Layer)</p>
-        </div>
-        <div class="carousel-item">
-            <img src="public/stm32f1_pcb/stm32f1_layout_routing.png"
-                class="d-block img-fluid mx-auto my-2"
-                style="max-width: 600px; max-height: 450px; object-fit: contain;"
-                alt="PCB Layout and Routing (All layers)">
-            <p class="text-secondary text-center fs-6 m-2 dynamic_size_text">PCB Layout and Routing (All Layers)</p>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#stm32f1BoardCarousel"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#stm32f1BoardCarousel"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+<div class="img-strip">
+    <figure>
+        <img src="public/stm32f1_pcb/stm32f1_populated_bottom.png" alt="Populated PCB (Bottom)" />
+        <figcaption class="text-secondary fs-6 mt-2 text-center">Populated PCB (Bottom)</figcaption>
+    </figure>
+    <figure>
+        <img src="public/stm32f1_pcb/stm32f1_populated_top.png" alt="Populated PCB (Top)" />
+        <figcaption class="text-secondary fs-6 mt-2 text-center">Populated PCB (Top)</figcaption>
+    </figure>
+    <figure>
+        <img src="public/stm32f1_pcb/stm32f1_layout_routing.png" alt="PCB Layout" />
+        <figcaption class="text-secondary fs-6 mt-2 text-center">PCB Layout</figcaption>
+    </figure>
 </div>
+
+<p class="fs-6 m-2 dynamic_size_text fw-bold">
+    GitHub link 
+    <a class="link-underline-primary"
+        href="https://github.com/stevenwdyer/stm32f1-dev-board"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="button_redirect('https://github.com/stevenwdyer/stm32f1-dev-board')">here</a>
+</p>
