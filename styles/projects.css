@@ -28,6 +28,11 @@ body {
     color: #2563eb;
     margin-bottom: 1rem;
 }
+
+.project-media {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
  
 /* ── Section group headers ───────────────────────────── */
 .section-header {
